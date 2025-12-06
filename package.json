@@ -1,0 +1,22 @@
+{
+  "name": "rbac-gorules",
+  "version": "1.0.0",
+  "description": "RBAC Hotel Smart Lock System using GoRules",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest"
+  },
+  "keywords": ["rbac", "gorules", "hotel", "smart-lock", "access-control"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "@gorules/zen-engine": "^0.51.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "jest": "^29.7.0"
+  }
+}
