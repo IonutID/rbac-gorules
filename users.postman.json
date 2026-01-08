@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Alice Admin",
+        "email": "alice@hotel.com",
+        "role": "admin"
+    },
+    {
+        "name": "Bob Manager",
+        "email": "bob@hotel.com",
+        "role": "manager"
+    },
+    {
+        "name": "Charlie Staff",
+        "email": "charlie@hotel.com",
+        "role": "staff"
+    },
+    {
+        "name": "David Customer",
+        "email": "david@example.com",
+        "role": "customer_deluxe"
+    },
+    {
+        "name": "Emma Customer",
+        "email": "emma@example.com",
+        "role": "customer_standard"
+    }
+]

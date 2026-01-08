@@ -1,0 +1,27 @@
+[
+  {
+    "code": "sauna-1",
+    "name": "Sauna",
+    "type": "sauna"
+  },
+  {
+    "code": "lobby",
+    "name": "Lobby",
+    "type": "common_area"
+  },
+  {
+    "code": "gym",
+    "name": "Gym",
+    "type": "common_area"
+  },
+  {
+    "code": "staff-room",
+    "name": "Staff Room",
+    "type": "staff_area"
+  },
+  {
+    "code": "office",
+    "name": "Office",
+    "type": "admin_area"
+  }
+]

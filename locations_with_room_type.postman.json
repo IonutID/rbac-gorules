@@ -1,0 +1,26 @@
+[
+  {
+    "code": "room-101",
+    "name": "Room 101",
+    "type": "room",
+    "roomType": "standard"
+  },
+  {
+    "code": "room-102",
+    "name": "Room 102",
+    "type": "room",
+    "roomType": "standard"
+  },
+  {
+    "code": "room-201",
+    "name": "Room 201",
+    "type": "room",
+    "roomType": "deluxe"
+  },
+  {
+    "code": "room-202",
+    "name": "Room 202",
+    "type": "room",
+    "roomType": "deluxe"
+  }
+]
