@@ -1,7 +1,3 @@
-/**
- * Location/Area Types in the Hotel
- */
-
 const LOCATION_TYPES = {
   ROOM: 'room',
   SAUNA: 'sauna',
@@ -15,7 +11,4 @@ const ROOM_TYPES = {
   DELUXE: 'deluxe'
 };
 
-module.exports = {
-  LOCATION_TYPES,
-  ROOM_TYPES
-};
+module.exports = { LOCATION_TYPES, ROOM_TYPES };

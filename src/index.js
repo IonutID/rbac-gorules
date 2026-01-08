@@ -1,11 +1,13 @@
+require('dotenv').config();
 const express = require('express');
 const accessControlService = require('./services/accessControl');
-
+const connectDB = require('./db');
 // Import routes
 const usersRouter = require('./routes/users');
 const locationsRouter = require('./routes/locations');
 const bookingsRouter = require('./routes/bookings');
 const accessRouter = require('./routes/access');
+const populateRouter = require('./routes/populateRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -41,6 +43,7 @@ app.use('/api/users', usersRouter);
 app.use('/api/locations', locationsRouter);
 app.use('/api/bookings', bookingsRouter);
 app.use('/api/access', accessRouter);
+app.use('/api/populate', populateRouter);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
@@ -62,20 +65,24 @@ app.use((req, res) => {
 // Initialize the access control service and start server
 async function startServer() {
   try {
+    console.log('Connecting to MongoDB...');
+    await connectDB();
     console.log('Initializing Access Control Service...');
     await accessControlService.initialize();
     
     app.listen(PORT, () => {
-      console.log(`\n🚀 Hotel RBAC Smart Lock System is running!`);
-      console.log(`📍 Server: http://localhost:${PORT}`);
-      console.log(`\n📚 Available endpoints:`);
+      console.log(`\n Hotel RBAC Smart Lock System is running!`);
+      console.log(` Server: http://localhost:${PORT}`);
+      console.log(`\n Available endpoints:`);
       console.log(`   GET  /                        - API info`);
       console.log(`   GET  /api/users               - List all users`);
       console.log(`   GET  /api/locations           - List all locations`);
       console.log(`   GET  /api/bookings            - List all bookings`);
+      console.log(`   POST /api/populate/users      - Add sample user`);
+      console.log(`   POST /api/populate/locations  - Add sample location`);
+      console.log(`   POST /api/populate/bookings   - Add sample booking`);
       console.log(`   POST /api/access/check        - Check access (body: {userId, locationId})`);
-      console.log(`   GET  /api/access/test/:userId/:locationId - Test access`);
-      console.log(`\n🔐 RBAC System ready with GoRules decision engine!\n`);
+      console.log(`\n RBAC System ready with GoRules decision engine!\n`);
     });
   } catch (error) {
     console.error('Failed to start server:', error);

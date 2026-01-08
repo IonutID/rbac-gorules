@@ -1,14 +1,20 @@
 const express = require('express');
 const router = express.Router();
-const { getAllLocations } = require('../models/mockData');
+const { Location } = require('../models/locationSchema');
 
 /**
  * GET /api/locations
- * Get all locations
  */
-router.get('/', (req, res) => {
-  const locations = getAllLocations();
-  res.json(locations);
+router.get('/', async (req, res) => {
+  try {
+    const locations = await Location.find({}, { __v: 0 });
+    res.json(locations);
+  } catch (err) {
+    res.status(500).json({
+      error: 'Failed to fetch locations',
+      message: err.message
+    });
+  }
 });
 
 module.exports = router;
