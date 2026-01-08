@@ -1,0 +1,515 @@
+{
+	"info": {
+		"_postman_id": "f1d5cf7b-c210-4aac-a5a4-06de66ac0865",
+		"name": "posd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51359943",
+		"_collection_link": "https://posd-team.postman.co/workspace/POSD-Team-Workspace~a4c7152f-34e2-40a9-80f4-38f3ec93b515/collection/21048292-f1d5cf7b-c210-4aac-a5a4-06de66ac0865?action=share&source=collection_link&creator=51359943"
+	},
+	"item": [
+		{
+			"name": "add_location",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"{{code}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"type\": \"{{type}}\"\r\n}\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_location_with_room_type",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"code\": \"{{code}}\",\r\n  \"name\": \"{{name}}\",\r\n  \"type\": \"{{type}}\",\r\n  \"roomType\": \"{{roomType}}\"\r\n}\r\n\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/locations",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"locations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"{{name}}\",\r\n  \"email\": \"{{email}}\",\r\n  \"role\": \"{{role}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_booking_David_room201",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f80e40a7f15153d594762\",\r\n  \"roomId\": \"695f7fac0a7f15153d59474d\",\r\n  \"roomType\": \"deluxe\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-10T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_booking_emma_room101_standard",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/populate/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"populate",
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_users",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_locations",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_bookings",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_customer_room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_customer_common_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_customer_staff_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_deluxe_customer_sauna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_standard_customer_sauna",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_manager_gym",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_manager_lobby",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_manager_admin_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_customer_not_booked_room",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_admin_admin_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_staff_admin_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check_access_staff_staff_area",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userId\": \"695f811c0a7f15153d594766\", // Emma’s id\r\n  \"roomId\": \"695f7ef00a7f15153d594749\",   // room101_id\r\n  \"roomType\": \"standard\",\r\n  \"checkIn\": \"2025-12-01T00:00:00.000Z\",\r\n  \"checkOut\": \"2025-12-08T00:00:00.000Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/access/check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"access",
+						"check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
